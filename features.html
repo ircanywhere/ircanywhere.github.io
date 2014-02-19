@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IRCAnywhere</title>
+
+		<link rel="stylesheet" type="text/css" href="css/ircanywhere.css" />
+
+		<script>
+			/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-29855733-1', 'ircanywhere.com');
+			ga('send', 'pageview');*/
+		</script>
+	</head>
+	<body>
+		<div class="topbar clear main">
+			<ul id="main-menu">
+				<li class="logo"><a href="index.html">IRCAnywhere</a></li>
+				<li><a href="http://try.ircanywhere.com">Try IRCAnywhere!</a></li>
+				<li><a href="https://ircanywhere.readthedocs.org">Documentation</a></li>
+				<li><a href="features.html">Features</a></li>
+			</ul>
+			<div class="topbar inner"></div>
+		</div>
+		<div id="banner">
+			<div id="banner-inner" class="clear">
+				<div class="banner-left">
+					<h2>Features</h2>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="main-inner">
+				<div class="row feature-tour clear">
+					<div class="row feature-tour clear">
+						<div class="span3">
+							<h3>Easy to setup new accounts</h3>
+							<p>Your users are provided with a signup form to create new accounts which you have control over.</p>
+						</div>
+						<div class="span3">
+							<h3>Input history</h3>
+							<p>Full input history by hitting the up and down arrows on the keyboard which is saved between sessions.</p>
+						</div>
+						<div class="span3">
+							<h3>User friendly interface</h3>
+							<p>IRCAnywhere has been designed to be an easy to use and appealing application with minimal clutter.</p>
+						</div>
+					</div>
+					<div class="modal-header-top">
+						<h2>Technical Features</h2>
+					</div>
+					<div class="row feature-tour clear">
+						<div class="span2">
+							<h3>Powerful IRC backend</h3>
+							<p>Most other alternatives use the outdated node-irc library. We've built a new library from scratch designed to handle multiple connections, it supports an advanced queueing system when networks throttle connections and allows us to detach the clients from the main process minimising downtime.</p>
+						</div>
+						<div class="span2">
+							<h3>Advanced oplog based architecture</h3>
+							<p>We use MongoDB's oplog tailing feature to propagate updates down to the web clients. This allows us have a snapshot of the entire system including channels, modes, topics and users in the database in realtime. This also carves the way for the possibility to cluster IRCAnywhere instances together.</p>
+						</div>
+					</div>
+
+					<div class="modal-header-top">
+						<h2 class="dimmed">Coming soon...</h2>
+					</div>
+					<div class="row feature-tour clear">
+						<div class="span3">
+							<h3>Full modern browser support</h3>
+							<p>Full support from a range of modern web browsers including mobile devices.</p>
+						</div>
+						<div class="span3">
+							<h3>Notifications</h3>
+							<p>Full support for desktop notifications in all browsers that support them.</p>
+						</div>
+						<div class="span3">
+							<h3>Embedded content</h3>
+							<p>The ability to optionally embed content such as images, youtube videos and code snippets.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main-footer">
+			<p><a href="http://try.ircanywhere.com/#/signup">Sign up</a> &middot; <a href="https://github.com/ircanywhere/ircanywhere" target="_blank">Github</a> &middot; <a href="https://twitter.com/ircanywhere" target="_blank">@ircanywhere</a></p>
+			<p>© 2013 IRCAnywhere. All rights reserved.</p>
+		</div>
+		<a href="https://github.com/ircanywhere/ircanywhere"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9000" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	</body>
+</html>
