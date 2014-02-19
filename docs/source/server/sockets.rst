@@ -34,6 +34,12 @@ Or something similar. I'll spend time ironing out the details at some point
 
    :returns: void
 
+.. js:attribute:: SocketManager.propogate
+
+   An array of collections to propoagate to the client when changes occur
+
+   :type: array 
+
 .. js:function:: SocketManager.allow(collection, object)
 
    Responsible for setting allow rules on collection modifications from the client side
