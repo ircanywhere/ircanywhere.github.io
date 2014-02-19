@@ -15,10 +15,11 @@ This documentation is for the most current versions ``0.2-alpha`` and ``0.2-beta
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    pre_requirements
    installing_ircanywhere
+   server/index
 
 .. _IRCCloud: https://www.irccloud.com
 .. _`available on github`: https://github.com/ircanywhere/ircanywhere
