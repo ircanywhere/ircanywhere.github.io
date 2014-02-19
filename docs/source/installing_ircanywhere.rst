@@ -1,6 +1,9 @@
 Installing IRCAnywhere
 ======================
 
+Installing
+~~~~~~~~~~
+
 Once the environment is setup properly you can proceed with installing **IRCAnywhere**.
 
 The first step is to clone the github repo, or you can install from the ``0.2-alpha`` release. However a number of stability changes have been made since then so the ``development`` branch is usually the most stable. ::

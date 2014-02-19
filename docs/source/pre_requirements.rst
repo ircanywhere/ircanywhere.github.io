@@ -7,6 +7,9 @@ IRCAnywhere requires a few tools to be installed before we can start installing 
 * npm
 * MongoDB
 
+Installing Node.js and Npm
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 First we'll install nodejs and npm `we recommend latest stable versions as always`.
 
 * **Fedora**
@@ -24,6 +27,9 @@ First we'll install nodejs and npm `we recommend latest stable versions as alway
     $ sudo add-apt-repository ppa:chris-lea/node.js
     $ apt-get update
     $ apt-get install nodejs
+
+Installing MongoDB
+~~~~~~~~~~~~~~~~~~
 
 Next we'll install MongoDB and set it up correctly.
 
