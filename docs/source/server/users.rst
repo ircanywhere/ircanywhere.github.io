@@ -105,7 +105,7 @@ IRCAnywhere server/users.js
    :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.updatePassword(user, password, confirmPassword, currentPassword])
+.. js:function:: UserManager.updatePassword(user, password, confirmPassword[, currentPassword])
 
    Updates a users password, doesn't bypass any checkings, just doesn't
    define how you select the user, so via a token or direct user object
@@ -116,7 +116,7 @@ IRCAnywhere server/users.js
    :param string [currentPassword]: The current password
    :returns: An output object for the API call
 
-.. js:function:: UserManager.onUserLogin(me, force])
+.. js:function:: UserManager.onUserLogin(me[, force])
 
    An event which is called when a successful login occurs, this logic is kept out of
    the handler for /api/login because it's specific to a different section of the application

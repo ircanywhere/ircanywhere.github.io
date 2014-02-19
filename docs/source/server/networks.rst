@@ -81,7 +81,7 @@ IRCAnywhere server/networks.js
    :param boolean activate: Whether to set the tab as active or not
    :returns: void
 
-.. js:function:: NetworkManager.removeTab(client, target])
+.. js:function:: NetworkManager.removeTab(client[, target])
 
    Removes the specified tab, be careful because this doesn't re-select one, you're expected to look
    for a removed tab, if it's the currently selected one, go back to a different one.

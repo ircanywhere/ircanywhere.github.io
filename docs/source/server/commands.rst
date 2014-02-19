@@ -33,7 +33,7 @@ IRCAnywhere server/commands.js
    :param boolean ban: Whether to ban or unban
    :returns: void
 
-.. js:function:: CommandManager.createAlias(command, ...)
+.. js:function:: CommandManager.createAlias(command, alias)
 
    Creates an alias from the first parameter to the remaining ones.
    
@@ -43,7 +43,7 @@ IRCAnywhere server/commands.js
        // sets an alias for /p and /leave to forward to /part
 
    :param string command: A command to alias
-   :param string ...: A command to map to
+   :param ...string alias: A command to map to
    :returns: void
 
 .. js:function:: CommandManager.parseCommand(user, client, target, command)

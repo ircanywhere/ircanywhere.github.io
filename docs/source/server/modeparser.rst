@@ -39,8 +39,8 @@ IRCAnywhere server/modeparser.js
 .. js:function:: ModeParser.handleParams(capabilities, users, modeArray)
 
    Applies any mode changes that contain status related modes, usually qaohv modes
-       minus: rickibalboa: -o > will remove the o flag from the nickname record
-    minus: rickibalboa: +v > will set the v flag on the nickname record
+   minus: rickibalboa: -o > will remove the o flag from the nickname record
+   minus: rickibalboa: +v > will set the v flag on the nickname record
 
    :param object capabilities: A valid capabilities object from a client
    :param object users: A valid users array for a channel

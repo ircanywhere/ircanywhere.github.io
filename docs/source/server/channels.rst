@@ -25,9 +25,9 @@ IRCAnywhere server/channels.js
 
    :param string network: A network string such as 'freenode'
    :param string channel: The name of a channel **with** the hash key '#ircanywhere'
-   :returns: chan A channel object straight out of the database.
+   :returns: A channel object straight out of the database.
 
-.. js:function:: ChannelManager.insertUsers(key, network, channel, users, force])
+.. js:function:: ChannelManager.insertUsers(key, network, channel, users[, force])
 
    Inserts a user or an array of users into a channel record matching the network key
    network name and channel name, with the option to force an overwrite
@@ -37,7 +37,7 @@ IRCAnywhere server/channels.js
    :param string channel: The channel name '#ircanywhere'
    :param array[object] users: An array of valid user objects usually from a who/join output
    :param boolean [force]: Optional boolean whether to overwrite the contents of the channelUsers
-   :returns: users The final array of the users inserted
+   :returns: The final array of the users inserted
 
 .. js:function:: ChannelManager.removeUsers(network[, channel, users])
 
@@ -72,11 +72,11 @@ IRCAnywhere server/channels.js
    :param string mode: Mode string
    :returns: void
 
-.. js:function:: ChannelManager.updateTopic(A, channel, topic, setby)
+.. js:function:: ChannelManager.updateTopic(key, channel, topic, setby)
 
    Updates the specific channel's topic and setby in the internal records.
 
-   :param objectid A: valid Mongo ObjectID for the networks collection
+   :param objectid key: A valid Mongo ObjectID for the networks collection
    :param string channel: A valid channel name
    :param string topic: The new topic
    :param string setby: A setter string, usually in the format of 'nickname!username@hostname'

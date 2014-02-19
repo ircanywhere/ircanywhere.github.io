@@ -40,7 +40,7 @@ IRCAnywhere server/websocket.js
 
    :returns: void
 
-.. js:function:: WebSocket.send(event, data, close])
+.. js:function:: WebSocket.send(event, data[, close])
 
    Sends outgoing packets
 
