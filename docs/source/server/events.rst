@@ -17,7 +17,7 @@ IRCAnywhere server/events.js
 
    A list of events relating to channels
 
-.. js:function:: EventManager.this._insert(client, message, type[, user, force])
+.. js:function:: EventManager._insert(client, message, type[, user, force])
 
    Inserts an event into a backlog after all the checking has been done
    this api is private and EventManager.insertEvent should be used instead

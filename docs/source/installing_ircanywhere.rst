@@ -29,6 +29,14 @@ Next you'll need to build the client source, you'll need to make sure ``grunt-cl
 
 Finally, edit the configuration file ``config.example.json`` a few things will need changed by default, the ip address and port, and you'll need to include a smtp url if you want to be able to send emails out (forgot password links wont work without emails). Your MongoDB settings should be fine if you've followed these instructions. Finally rename it to ``config.json``.
 
+HTTPS
+~~~~~
+
+IRCAnywhere can also be served via HTTPS. Setting it up involves little more than editing the configuration and setting the `ssl` property to `true`. Once this is done you will need to add the following files into `private/certs`
+
+* `private/certs/key.pem`
+* `private/certs/cert.pem`
+
 Running
 ~~~~~~~
 
