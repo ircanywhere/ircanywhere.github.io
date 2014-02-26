@@ -1,0 +1,23 @@
+* Drastically improved memory usage
+* Help modal dialog with commands and aliases
+* Fixed a critcal bug with new networks
+* Added start/stop scripts
+* Added HTTPS support
+* Fixed bugs with disconnecting clients manually
+* Networks connect automatically on creation
+* Fixed bug where userlist wasn't sent to newly joined channels
+* Improved how selected tabs are handled, not possible to have a duplicate now
+* Implemented optional user timeouts
+* Added irc-factory throttling, very efficient at booting up hundreds of clients in a correct order and not forgetting about any of them if the network throttles
+* Improved logging
+* Fixed a huge number of critical crashes
+* Implemented a client side event emitter to let controllers listen for new data
+* Performance tweaks on large channels
+* Fully documented backend code with docs generated for http://ircanywhere.readthedocs.org/
+* Improved mongodb connection code, attempts to reconnect and setup collections again
+* Rewrote old websocket code into a new RPC style protocol
+* Backlog loading as per #13
+* Fixed not autoscrolling to the bottom on new messages
+* Web clients attempt auto-reconnects and interface is blocked if disconnected
+* Good performance upgrades when working with huge backlogs, DOM elements are popped off on incoming data
+* Tab completion
