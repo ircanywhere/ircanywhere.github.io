@@ -56,4 +56,14 @@ I use a program called `https://github.com/visionmedia/mon`_ to keep the process
 
 If you're running in a production environment it would be better to run this behind a nginx proxy or similar. In the future there will be instructions on how to do this and the possibility to serve the css/js files via nginx. I'll also be implementing a way to sticky session via nginx when the system is clustered.
 
+Updating
+~~~~~~~~
+
+You can update IRCAnywhere by running the following two commands: ::
+
+	$ git pull
+	$ grunt
+
+And then restart accordingly, note client side files may be cached. A hard reset `ctrl+r` will force a full reload or try clearing your browser's cache.
+
 .. _https://github.com/visionmedia/mon: https://github.com/visionmedia/mon
