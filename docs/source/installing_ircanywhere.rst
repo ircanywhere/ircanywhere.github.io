@@ -9,8 +9,8 @@ Once the environment is setup properly you can proceed with installing **IRCAnyw
 The first step is to clone the github repo, or you can install from the ``0.2-alpha`` release. However a number of stability changes have been made since then so the ``development`` branch is usually the most stable. ::
 
     $ git clone https://github.com/ircanywhere/ircanywhere.git
-    $ git checkout development
     $ cd ircanywhere
+    $ git checkout development
 
 **or** from `0.2-alpha` ::
 

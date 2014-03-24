@@ -28,6 +28,18 @@ First we'll install nodejs and npm `we recommend latest stable versions as alway
     $ apt-get update
     $ apt-get install nodejs
 
+If this is not working for any reason, usually something similar to: ::
+
+    Err http://ppa.launchpad.net wheezy/main Sources 
+    404  Not Found 
+
+Then I would recommend installing node with nvm_ ::
+
+    $ curl https://raw.github.com/creationix/nvm/v0.3.0/install.sh | sh
+    $ nvm install 0.10
+    $ nvm use 0.10
+    $ nvm alias default 0.10
+
 Installing MongoDB
 ~~~~~~~~~~~~~~~~~~
 
@@ -100,5 +112,6 @@ Once you've started the mongo instance sucessfully you can connect to it with th
 
 If you see the `:PRIMARY>` suffix then you've set the replica set up successfully. If you're still having trouble you can try following this more detailed guide at `http://meteorhacks.com/lets-scale-meteor.html`_.
 
+.. _nvm: https://github.com/creationix/nvm
 .. _here: https://docs.google.com/document/d/1rJ1Hi6Q9oQXPRrROJkL9xO-CQR7Unk1mPN4SHtSiY08/edit#heading=h.wivau77ttb0a
 .. _http://meteorhacks.com/lets-scale-meteor.html: http://meteorhacks.com/lets-scale-meteor.html
