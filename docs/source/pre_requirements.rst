@@ -40,6 +40,11 @@ Then I would recommend installing node with nvm_ ::
     $ nvm use 0.10
     $ nvm alias default 0.10
 
+Installing With The Installer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the latest development branch we now have an install script to automate everything past this point. If you're running in a production environment it's recommended to install your own global version of MongoDB so if the time comes you're ready to scale it and secure it. Although if you're just interested in a quick get up and go then it's worth skipping to this_ section.
+
 Installing MongoDB
 ~~~~~~~~~~~~~~~~~~
 
@@ -113,5 +118,6 @@ Once you've started the mongo instance sucessfully you can connect to it with th
 If you see the `:PRIMARY>` suffix then you've set the replica set up successfully. If you're still having trouble you can try following this more detailed guide at `http://meteorhacks.com/lets-scale-meteor.html`_.
 
 .. _nvm: https://github.com/creationix/nvm
+.. _this: installing_ircanywhere.html
 .. _here: https://docs.google.com/document/d/1rJ1Hi6Q9oQXPRrROJkL9xO-CQR7Unk1mPN4SHtSiY08/edit#heading=h.wivau77ttb0a
 .. _http://meteorhacks.com/lets-scale-meteor.html: http://meteorhacks.com/lets-scale-meteor.html

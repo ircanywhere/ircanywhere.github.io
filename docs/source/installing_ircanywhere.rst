@@ -1,6 +1,21 @@
 Installing IRCAnywhere
 ======================
 
+Automatic Install
+~~~~~~~~~~~~~~~~~
+
+You can choose to do a manual install if you want to understand how things work, by following the rest of this document, or you can run the install script which will automatically install MongoDB, the npm dependencies, start MongoDB correctly and compile the client side files.
+
+To do this simply run the command ::
+
+    $ ./install.sh
+
+If you already have MongoDB installed but not set up correctly with Oplog tailing, we can do that for you aswell, simply run ::
+
+    $ sudo ./install.sh
+
+If this goes through with no errors you can skip to the running section here_.
+
 Installing
 ~~~~~~~~~~
 
@@ -22,12 +37,12 @@ Then we need to install the dependencies (I've no idea how this runs on windows,
 
 ``$ npm install``
 
-Next you'll need to build the client source, you'll need to make sure ``grunt-cli`` is installed via npm. Once that is done you can run these commands. You can set grunt up to watch files if you're doing any development work (including writing plugins) by running `grunt watch` after the following commands. ::
+Next you'll need to build the client source, you'll need to make sure ``gulp`` is installed via npm. Once that is done you can run these commands. You can set gulp up to watch files if you're doing any development work (including writing plugins) by running `gulp watch` after the following commands. ::
 
-    $ npm install -g grunt-cli
-    $ grunt
+    $ npm install -g gulp
+    $ gulp
 
-Finally, edit the configuration file ``config.example.json`` a few things will need changed by default, the ip address and port, and you'll need to include a smtp url if you want to be able to send emails out (forgot password links wont work without emails). Your MongoDB settings should be fine if you've followed these instructions. Finally rename it to ``config.json``.
+Finally, edit the configuration file ``config.example.json`` a few things will need changed by default, the ip address and port, and you'll need to include a smtp url if you want to be able to send emails out (forgot password links wont work without emails). Your MongoDB settings should be fine if you've followed these instructions or automatically installed it with the installer. Finally rename it to ``config.json``.
 
 HTTPS
 ~~~~~
@@ -62,8 +77,9 @@ Updating
 You can update IRCAnywhere by running the following two commands: ::
 
 	$ git pull
-	$ grunt
+	$ ./install.sh
 
 And then restart accordingly, note client side files may be cached. A hard reset `ctrl+r` will force a full reload or try clearing your browser's cache.
 
+.. _here: #running
 .. _https://github.com/visionmedia/mon: https://github.com/visionmedia/mon
