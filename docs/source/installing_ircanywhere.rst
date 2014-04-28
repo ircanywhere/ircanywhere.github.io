@@ -69,7 +69,7 @@ I use a program called `https://github.com/visionmedia/mon`_ to keep the process
 
 ``$ mon -d "node . run" -p ircanywhere.pid -l logs/mon.log``
 
-If you're running in a production environment it would be better to run this behind a nginx proxy or similar. You can see install instructions at `reverse proxies`_ section
+If you're running in a production environment it would be better to run this behind a nginx proxy or similar. You can see install instructions at `reverse proxies`_ section.
 
 Updating
 ~~~~~~~~
