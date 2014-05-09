@@ -30,6 +30,15 @@ IRCAnywhere server/irchandler.js
    :param array raw: An array of raw IRC strings to format
    :returns: A formatted array of the inputted strings
 
+.. js:function:: IRCHandler.opened(client, message)
+
+   Handles the opened event from `irc-factory` which just tells us what localPort and any other
+   information relating to the client so we can make sure the identd server is working.
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
 .. js:function:: IRCHandler.registered(client, message)
 
    Handles the registered event, this will only ever be called when an IRC connection has been
@@ -211,6 +220,54 @@ IRCAnywhere server/irchandler.js
 .. js:function:: IRCHandler.unknown(client, message)
 
    Handles an incoming unknown event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.banlist(client, message)
+
+   Handles an incoming banlist event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.invitelist(client, message)
+
+   Handles an incoming invitelist event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.exceptlist(client, message)
+
+   Handles an incoming exceptlist event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.quietlist(client, message)
+
+   Handles an incoming quietlist event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.list(client, message)
+
+   Handles an incoming list event
+
+   :param object client: A valid client object
+   :param object message: A valid message object
+   :returns: void
+
+.. js:function:: IRCHandler.whois(client, message)
+
+   Handles an incoming whois event
 
    :param object client: A valid client object
    :param object message: A valid message object

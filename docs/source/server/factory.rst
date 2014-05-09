@@ -63,3 +63,21 @@ IRCAnywhere server/factory.js
 
    :param object network: A valid client object
    :returns: void
+
+.. js:function:: IRCFactory.destroy(key)
+
+   Sends the command to destroy a client with the given key. If the client doesn't exist
+   the command will just be dropped.
+
+   :param objectid key: A client key which has the type of a Mongo ObjectID
+   :returns: void
+
+.. js:function:: IRCFactory.send(key, command, args)
+
+   Calls an RPC command on the irc-factory client, usually used to send
+   commands such as /WHO etc. It's probably best to use CommandManager in most cases
+
+   :param objectid key: A client key which has the type of a Mongo ObjectID
+   :param string command: An IRC command to send, such as 'mode' or 'join'
+   :param array args: An array of arguments to send delimited by a space.
+   :returns: void

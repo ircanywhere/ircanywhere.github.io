@@ -64,6 +64,12 @@ IRCAnywhere server/app.js
 
    :returns: void
 
+.. js:function:: Application.handleError()
+
+   This should be called as the second argument for fibrous.run()
+
+   :returns: void
+
 .. js:function:: Application.setupNode()
 
    Checks for a node record to store in the file system and database

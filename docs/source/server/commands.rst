@@ -57,7 +57,19 @@ IRCAnywhere server/commands.js
    :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.msg(user, client, target, command)
+.. js:function:: CommandManager.msg(user, client, target, command, out, id)
+
+   '/nickserv' command
+
+   :param object user: A valid user object
+   :param object client: A valid client object
+   :param string target: Target to send command to, usually a channel or username
+   :param string command: The command string
+   :param boolean out: Used to force the message to target or params[0]
+   :param objectid id: The object id of the command so we can remove it if we need to
+   :returns: void
+
+.. js:function:: CommandManager.msg(user, client, target, command, out, id)
 
    '/msg' command
 
@@ -65,6 +77,8 @@ IRCAnywhere server/commands.js
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
    :param string command: The command string
+   :param boolean out: Used to force the message to target or params[0]
+   :param objectid id: The object id of the command so we can remove it if we need to
    :returns: void
 
 .. js:function:: CommandManager.notice(user, client, target, command)
@@ -260,6 +274,26 @@ IRCAnywhere server/commands.js
 .. js:function:: CommandManager.reconnect(user, client, target, command)
 
    '/reconnect' command
+
+   :param object user: A valid user object
+   :param object client: A valid client object
+   :param string target: Target to send command to, usually a channel or username
+   :param string command: The command string
+   :returns: void
+
+.. js:function:: CommandManager.list(user, client, target, command)
+
+   '/list' command
+
+   :param object user: A valid user object
+   :param object client: A valid client object
+   :param string target: Target to send command to, usually a channel or username
+   :param string command: The command string
+   :returns: void
+
+.. js:function:: CommandManager.whois(user, client, target, command)
+
+   '/whois' command
 
    :param object user: A valid user object
    :param object client: A valid client object

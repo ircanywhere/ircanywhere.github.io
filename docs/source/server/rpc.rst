@@ -20,6 +20,15 @@ IRCAnywhere server/rpc.js
 
    :returns: void
 
+.. js:function:: RPCHandler.push(uid, command, data)
+
+   Pushes the data and command out to any sockets associated to that uid
+
+   :param string uid: A valid user id converted from an object ID
+   :param string command: The command to send
+   :param string data: The json data to send
+   :returns: void
+
 .. js:function:: RPCHandler.handleUsersUpdate(doc)
 
    Handles any update changes to the users collection and sends changes to clients
@@ -41,16 +50,16 @@ IRCAnywhere server/rpc.js
    :param object doc: A valid MongoDB document with an _id
    :returns: void
 
-.. js:function:: RPCHandler.handleEventsInsert(doc)
+.. js:function:: RPCHandler.handleEventsAll(doc)
 
-   Handles any inserts to the events collection
+   Handles any changes to the events collection
 
    :param object doc: A valid MongoDB document with an _id
    :returns: void
 
-.. js:function:: RPCHandler.handleCommandsInsert(doc)
+.. js:function:: RPCHandler.handleCommandsAll(doc)
 
-   Handles any inserts to the commands collection
+   Handles all operations on the commands collection
 
    :param object doc: A valid MongoDB document with an _id
    :returns: void
