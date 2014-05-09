@@ -7,6 +7,8 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/ircanywhere.css" />
 
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://unslider.com/unslider.min.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,6 +17,14 @@
 
 			ga('create', 'UA-29855733-1', 'ircanywhere.com');
 			ga('send', 'pageview');
+
+			$(function() {
+				$('.carousel').unslider({
+					speed: 500,
+					delay: 3000,
+					keys: true,
+				});
+			});
 		</script>
 	</head>
 	<body>
@@ -32,7 +42,19 @@
 			<div id="banner-inner" class="clear">
 				<div class="banner-left">
 					<h1>IRCAnywhere</h1><h3 class="inline">0.2-alpha</h3>
-					<img src="img/banner.png" alt="IRCAnywhere preview" />
+					<div class="carousel">
+						<ul>
+							<li>
+								<img src="img/banner1.png" class="item" alt="IRCAnywhere preview" />
+							</li>
+							<li>
+								<img src="img/banner2.png" class="item" alt="IRCAnywhere preview" />
+							</li>
+							<li>
+								<img src="img/banner3.png" class="item" alt="IRCAnywhere preview" />
+							</li>
+						</ul>
+					</div>
 					<a href="http://try.ircanywhere.com/#/signup" class="btn primary large">Sign up for a free account now</a>
 				</div>
 			</div>

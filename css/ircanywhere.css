@@ -309,15 +309,6 @@ body .btn.small {
 	display: inline-block;
 }
 
-#banner .banner-left img {
-	margin-top: 10px;
-	border-radius: 5px;
-	width: 100%;
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
-	box-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-
 #banner .banner-left a.btn {
 	display: block;
 	width: 203px;
@@ -467,4 +458,22 @@ body .btn.small {
 
 #main-footer a:hover {
 	text-decoration: underline;
+}
+
+.carousel {
+	position: relative;
+	overflow: auto;
+}
+
+.carousel li {
+	list-style: none;
+	float: left;
+}
+
+.carousel li item.img {
+	display: block;
+	width: 100%;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
