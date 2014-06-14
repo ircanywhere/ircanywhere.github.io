@@ -77,9 +77,12 @@ Next we'll install MongoDB and set it up correctly.
     $ brew update
     $ brew install mongodb
 
-* **Debian/Ubuntu**
+* **Debian/Ubuntu** ::
 
- ``$ apt-get install mongodb-10gen``
+    $sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+    $echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+    $sudo apt-get update
+    $sudo apt-get install mongodb-org
 
 The next step is setting up MongoDB correctly so we can take advantage of the oplog tailing features, to do this we need to start MongoDB with a replica set. It's likely your package manager started MongoDB when they finished installing it, so we need to shut it down first, do this with the following commands. ::
 
