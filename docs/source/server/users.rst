@@ -110,7 +110,7 @@ IRCAnywhere server/users.js
    Updates a users password, doesn't bypass any checkings, just doesn't
    define how you select the user, so via a token or direct user object
 
-   :param object user: A valid user object from `isAuthenticated`
+   :param promise user: A valid promise object from `isAuthenticated`
    :param string password: The new password to set
    :param string confirmPassword: The same password again
    :param string [currentPassword]: The current password

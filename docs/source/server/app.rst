@@ -28,12 +28,6 @@ IRCAnywhere server/app.js
 
    :type: boolean 
 
-.. js:attribute:: Application.config
-
-   A copy of the parsed config object
-
-   :type: object 
-
 .. js:attribute:: Application.packagejson
 
    A copy of the project's package.json object
@@ -66,7 +60,7 @@ IRCAnywhere server/app.js
 
 .. js:function:: Application.handleError()
 
-   This should be called as the second argument for fibrous.run()
+   Handle things such as domain errors and properly report
 
    :returns: void
 

@@ -7,7 +7,7 @@ IRCHandler
 
 IRCAnywhere server/irchandler.js
  
-.. js:class:: IRCHandler.IRCHandler()
+ .. js:class:: IRCHandler.IRCHandler()
 
    The object responsible for handling an event from IRCFactory
    none of these should be called directly, however they can be hooked onto

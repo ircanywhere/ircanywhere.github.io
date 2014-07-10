@@ -35,7 +35,7 @@ IRCAnywhere server/networks.js
    to determine who to connect on startup, doesn't ever really need to be called
    also can be modified with hooks to return more information if needed.
 
-   :returns: An object containing the clients that should be started up
+   :returns: A promise containing the clients that should be started up
 
 .. js:function:: NetworkManager.addNetworkApi(req, res)
 
@@ -55,7 +55,7 @@ IRCAnywhere server/networks.js
    :param object user: A valid user object from the `users` collection
    :param object network: A valid network object to insert
    :param string status: A valid network status
-   :returns: The network inserted or null if not
+   :returns: A promise to determine whether the insert worked or not
 
 .. js:function:: NetworkManager.addTab(client, target, type[, select, active])
 

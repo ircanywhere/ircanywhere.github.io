@@ -69,14 +69,14 @@ IRCAnywhere server/commands.js
    :param objectid id: The object id of the command so we can remove it if we need to
    :returns: void
 
-.. js:function:: CommandManager.msg(user, client, target, command, out, id)
+.. js:function:: CommandManager.msg(user, client, target, params, out, id)
 
    '/msg' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :param boolean out: Used to force the message to target or params[0]
    :param objectid id: The object id of the command so we can remove it if we need to
    :returns: void

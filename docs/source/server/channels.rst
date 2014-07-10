@@ -25,7 +25,7 @@ IRCAnywhere server/channels.js
 
    :param string network: A network string such as 'freenode'
    :param string channel: The name of a channel **with** the hash key '#ircanywhere'
-   :returns: A channel object straight out of the database.
+   :returns: A promise with a channel object straight out of the database.
 
 .. js:function:: ChannelManager.insertUsers(key, network, channel, users[, force])
 
@@ -37,7 +37,7 @@ IRCAnywhere server/channels.js
    :param string channel: The channel name '#ircanywhere'
    :param array[object] users: An array of valid user objects usually from a who/join output
    :param boolean [force]: Optional boolean whether to overwrite the contents of the channelUsers
-   :returns: The final array of the users inserted
+   :returns: A promise containing final array of the users inserted
 
 .. js:function:: ChannelManager.removeUsers(network[, channel, users])
 

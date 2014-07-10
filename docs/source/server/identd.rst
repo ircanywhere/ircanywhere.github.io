@@ -1,5 +1,5 @@
-IRCFactory
-==========
+IdentdServer
+============
 
 *(c) 2013-2014 http://ircanywhere.com*
 
