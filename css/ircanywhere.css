@@ -311,7 +311,7 @@ body .btn.small {
 
 #banner .banner-left a.btn {
 	display: block;
-	width: 203px;
+	width: 204px;
 	margin: 30px;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
@@ -463,6 +463,11 @@ body .btn.small {
 .carousel {
 	position: relative;
 	overflow: auto;
+
+	-webkit-border-radius: 5px;
+	-mox-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .carousel li {
@@ -475,5 +480,11 @@ body .btn.small {
 	width: 100%;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+	-ms-box-shadow: 0 1px 3px rgba(0,0,0,.5);
 	box-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+	-webkit-border-radius: 5px;
+	-mox-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
 }
