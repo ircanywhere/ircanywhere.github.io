@@ -52,7 +52,7 @@ IRCAnywhere server/factory.js
     
    More advanced docs can be found at https://github.com/ircanywhere/irc-factory/wiki/Events
 
-   :param array[string] event: A valid event array from irc-factory `['52d3fc718132f8486dcde1d0', 'privmsg']`
+   :param [string] event: A valid event array from irc-factory `['52d3fc718132f8486dcde1d0', 'privmsg']`
    :param object object: A valid event object from irc-factory
    :returns: void
 
@@ -64,12 +64,13 @@ IRCAnywhere server/factory.js
    :param object network: A valid client object
    :returns: void
 
-.. js:function:: IRCFactory.destroy(key)
+.. js:function:: IRCFactory.destroy(key, forced)
 
    Sends the command to destroy a client with the given key. If the client doesn't exist
    the command will just be dropped.
 
    :param objectid key: A client key which has the type of a Mongo ObjectID
+   :param boolean forced: Whether we forced a client disconnect or not
    :returns: void
 
 .. js:function:: IRCFactory.send(key, command, args)

@@ -37,14 +37,37 @@ IRCAnywhere server/networks.js
 
    :returns: A promise containing the clients that should be started up
 
-.. js:function:: NetworkManager.addNetworkApi(req, res)
+.. js:function:: NetworkManager.getClientsForUSer(userId)
+
+   Gets a list of active networks for a user.
+
+   :param string userId: Id of the user
+   :returns: A promise that will resolve to the clients for the given user
+
+.. js:function:: NetworkManager.getActiveChannelsForUser(userId, networkId)
+
+   Gets a list of active channels for a user.
+
+   :param string userId: Id of the user
+   :param string networkId: Id of the network
+   :returns: A promise that will resolve to the active channels for the given user
+
+.. js:function:: NetworkManager.addNetworkApi(req)
 
    Handles the add network api call, basically handling authentication
    validating the parameters and input, and on success passes the information
    to `addNetwork()` which handles everything else
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
+   :returns: An output object for the API call
+
+.. js:function:: NetworkManager.editNetworkApi(req)
+
+   Handles the edit network api call, everything the add network call does
+   except it takes a network ID as a parameter validates the new data.
+   On success it passes to `editNetwork()` which handles the rest.
+
+   :param object req: A valid request object from express
    :returns: An output object for the API call
 
 .. js:function:: NetworkManager.addNetwork(user, network, status)
@@ -55,6 +78,15 @@ IRCAnywhere server/networks.js
    :param object user: A valid user object from the `users` collection
    :param object network: A valid network object to insert
    :param string status: A valid network status
+   :returns: A promise to determine whether the insert worked or not
+
+.. js:function:: NetworkManager.editNetwork(user, network)
+
+   Edits an existing network, updating the record in the database. We'll inform
+   irc-factory that the network information has changed and perform a reconnect.
+
+   :param object user: A valid user object from the `users` collection
+   :param object network: A valid network object to update
    :returns: A promise to determine whether the insert worked or not
 
 .. js:function:: NetworkManager.addTab(client, target, type[, select, active])

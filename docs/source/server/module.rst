@@ -7,7 +7,7 @@ ModuleManager
 
 IRCAnywhere server/module.js
  
-.. js:class:: ModuleManager.ModuleManager()
+ .. js:class:: ModuleManager.ModuleManager()
 
    Handles loading of modules.
 

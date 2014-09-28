@@ -7,6 +7,18 @@ UserManager
 
 IRCAnywhere server/users.js
  
+.. js:function:: .loginServerUser(email, password)
+
+   Handles login of IRC server user
+
+   :param string email: User email
+   :param string password: User password
+.. js:function:: .updateLastSeen(userId[, lastSeen])
+
+   Update lastSeen entry of user.
+
+   :param string userId: Id of the user
+   :param date [lastSeen]: New lastSeen value
 .. js:class:: UserManager.UserManager()
 
    Responsible for handling user related actions ie registering, logging in, forgot passwords etc.
@@ -43,14 +55,13 @@ IRCAnywhere server/users.js
    :param object data: A valid data object from sock.js
 
 
-.. js:function:: UserManager.registerUser(req, res)
+.. js:function:: UserManager.registerUser(req)
 
    Handles user registrations, it takes req and res objects from express at the moment
    however it should probably stay this way, because the api to register a user is at /api/register.
    I can't see a reason to change this to take individual parameters.
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
 .. js:function:: UserManager.userLogin(req, res)
@@ -61,48 +72,43 @@ IRCAnywhere server/users.js
    :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.userLogout(req, res)
+.. js:function:: UserManager.userLogout(req)
 
    Handles the call to /api/logout which is self explanatory.
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.forgotPassword(req, res)
+.. js:function:: UserManager.forgotPassword(req)
 
    Handles the call to /api/forgot to send a forgot password link
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.resetPassword(req, res)
+.. js:function:: UserManager.resetPassword(req)
 
    Handles the call to /api/reset which will be called when the reset password link is visited
    Checking is done to make sure a token exists in a user record.
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.updateSettings(req, res)
+.. js:function:: UserManager.updateSettings(req)
 
    Handles the call to /api/settings/updatesettings which will update the settings for that user
    checking for authentication and validating if necessary.
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
-.. js:function:: UserManager.resetPassword(req, res)
+.. js:function:: UserManager.resetPassword(req)
 
    Handles the call to /api/settings/changepassword which is almost identical to resetPassword
    however it checks for authentication and then changes the password using that user, it doesn't
    take a token though.
 
    :param object req: A valid request object from express
-   :param object res: A valid response object from express
    :returns: An output object for the API call
 
 .. js:function:: UserManager.updatePassword(user, password, confirmPassword[, currentPassword])

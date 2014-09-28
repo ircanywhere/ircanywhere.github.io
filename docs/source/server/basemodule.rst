@@ -7,7 +7,7 @@ Module
 
 IRCAnywhere server/basemodule.js
  
-.. js:class:: Module.Module()
+ .. js:class:: Module.Module()
 
    Base class for creating modules
 

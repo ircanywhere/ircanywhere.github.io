@@ -29,7 +29,7 @@ IRCAnywhere server/events.js
    :param boolean [force]: An optional force boolean to force the event into the '*' status window
    :returns: void
 
-.. js:function:: EventManager.insertEvent(client, message, type)
+.. js:function:: EventManager.insertEvent(client, message, type, cb)
 
    Inserts an event into the backlog, takes a client and message object and a type
    Usually 'privmsg' or 'join' etc.
@@ -37,6 +37,7 @@ IRCAnywhere server/events.js
    :param object client: A valid client object
    :param object message: A valid message object from `irc-message`
    :param string type: Event type
+   :param function cb: Callback function to be executed after insert
    :returns: void
 
 .. js:function:: EventManager.determineHighlight(client, message, type, ours)
@@ -60,3 +61,20 @@ IRCAnywhere server/events.js
    :param object client: A valid client object
    :param object user: A valid user object
    :returns: A valid prefix object
+
+.. js:function:: EventManager.getEventByType(type, network, userId)
+
+   Gets the most recent event from the database by its type.
+
+   :param string type: Event type
+   :param objectid network: Event network
+   :param string userId: Id of the user
+   :returns: Promise that resolves to event.
+
+.. js:function:: EventManager.getUserPlayback(network, userId)
+
+   Gets the message playback for an IRC server user since he was last seen.
+
+   :param objectid network: Network to get playback from
+   :param string userId: Id of the user
+   :returns: Promise that resolves to array of playback events.

@@ -42,6 +42,13 @@ IRCAnywhere server/app.js
 
    :returns: void
 
+.. js:function:: Application.cleanCollections()
+
+   Clean `channelUsers` and `events` collection if needed. Usually when someone has installed
+   0.1-beta before installing this version and has incompatible data lingering around.
+
+   :returns: void
+
 .. js:function:: Application.setupOplog()
 
    This method initiates the oplog tailing query which will look for any incoming changes on the database.
@@ -69,6 +76,13 @@ IRCAnywhere server/app.js
    Checks for a node record to store in the file system and database
    This is done to generate a 'unique' but always the same ID to identify
    the system so we can make way for clustering in the future.
+
+   :returns: void
+
+.. js:function:: Application.selectCipherSuite()
+
+   This function will select a suitable cipher suite and return
+   a string to be used in createServer
 
    :returns: void
 

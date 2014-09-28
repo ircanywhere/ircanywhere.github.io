@@ -7,7 +7,7 @@ IdentdServer
 
 IRCAnywhere server/identd.js
  
-.. js:class:: IdentdServer.IdentdServer()
+ .. js:class:: IdentdServer.IdentdServer()
 
    This is the IdentdServer object which creates an integrated identd server and can be turned
    off via the configuration, this is a singleton and should never be instantiated more than once.

@@ -57,14 +57,14 @@ IRCAnywhere server/commands.js
    :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.msg(user, client, target, command, out, id)
+.. js:function:: CommandManager.msg(user, client, target, params, out, id)
 
    '/nickserv' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :param boolean out: Used to force the message to target or params[0]
    :param objectid id: The object id of the command so we can remove it if we need to
    :returns: void
@@ -81,232 +81,224 @@ IRCAnywhere server/commands.js
    :param objectid id: The object id of the command so we can remove it if we need to
    :returns: void
 
-.. js:function:: CommandManager.notice(user, client, target, command)
+.. js:function:: CommandManager.notice(user, client, target, params)
 
    '/notice' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.me(user, client, target, command)
+.. js:function:: CommandManager.me(user, client, target, params)
 
    '/me' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.join(user, client, target, command)
+.. js:function:: CommandManager.join(user, client, target, params)
 
    '/join' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.part(user, client, target, command)
+.. js:function:: CommandManager.part(user, client, target, params)
 
    '/part' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.cycle(user, client, target, command)
+.. js:function:: CommandManager.cycle(user, client, target, params)
 
    '/cycle' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.topic(user, client, target, command)
+.. js:function:: CommandManager.topic(user, client, target, params)
 
    '/topic' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.mode(user, client, target, command)
+.. js:function:: CommandManager.mode(user, client, target, params)
 
    '/mode' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.invite(user, client, target, command)
+.. js:function:: CommandManager.invite(user, client, target, params)
 
    '/invite' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.kick(user, client, target, command)
+.. js:function:: CommandManager.kick(user, client, target, params)
 
    '/kick' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.kickban(user, client, target, command)
+.. js:function:: CommandManager.kickban(user, client, target, params)
 
    '/kickban' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.ban(user, client, target, command)
+.. js:function:: CommandManager.ban(user, client, target, params)
 
    '/ban' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.unban(user, client, target, command)
+.. js:function:: CommandManager.unban(user, client, target, params)
 
    '/unban' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.nick(user, client, target, command)
+.. js:function:: CommandManager.nick(user, client, target, params)
 
    '/nick' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.ctcp(user, client, target, command)
+.. js:function:: CommandManager.ctcp(user, client, target, params)
 
    '/ctcp' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.away(user, client, target, command)
+.. js:function:: CommandManager.away(user, client, target, params)
 
    '/away' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.unaway(user, client, target, command)
+.. js:function:: CommandManager.unaway(user, client)
 
    '/unaway' command
 
    :param object user: A valid user object
    :param object client: A valid client object
-   :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.close(user, client, target, command)
+.. js:function:: CommandManager.close(user, client, target)
 
    '/close' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.query(user, client, target, command)
+.. js:function:: CommandManager.query(user, client, target)
 
    '/query' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.quit(user, client, target, command)
+.. js:function:: CommandManager.quit(user, client)
 
    '/quit' command
 
    :param object user: A valid user object
    :param object client: A valid client object
-   :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.reconnect(user, client, target, command)
+.. js:function:: CommandManager.reconnect(user, client)
 
    '/reconnect' command
 
    :param object user: A valid user object
    :param object client: A valid client object
-   :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
    :returns: void
 
-.. js:function:: CommandManager.list(user, client, target, command)
+.. js:function:: CommandManager.list(user, client, target, params)
 
    '/list' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.whois(user, client, target, command)
+.. js:function:: CommandManager.whois(user, client, target, params)
 
    '/whois' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void
 
-.. js:function:: CommandManager.raw(user, client, target, command)
+.. js:function:: CommandManager.raw(user, client, target, params)
 
    '/raw' command
 
    :param object user: A valid user object
    :param object client: A valid client object
    :param string target: Target to send command to, usually a channel or username
-   :param string command: The command string
+   :param string params: The command string
    :returns: void

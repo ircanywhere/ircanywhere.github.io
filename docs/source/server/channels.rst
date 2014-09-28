@@ -15,6 +15,15 @@ IRCAnywhere server/channels.js
 
    :returns: void
 
+.. js:function:: ChannelManager.queueJoin(id, channel, key)
+
+   Queues a channel for join
+
+   :param objectid id: A valid Mongo ObjectID for the networks collection
+   :param string channel: A valid channel name
+   :param string key: A key to join the channel if necessary
+   :returns: void
+
 .. js:function:: ChannelManager.getChannel(network, channel)
 
    Gets a tab record from the parameters passed in, strictly speaking this doesn't have to
@@ -27,39 +36,37 @@ IRCAnywhere server/channels.js
    :param string channel: The name of a channel **with** the hash key '#ircanywhere'
    :returns: A promise with a channel object straight out of the database.
 
-.. js:function:: ChannelManager.insertUsers(key, network, channel, users[, force])
+.. js:function:: ChannelManager.insertUsers(key, channel, users[, force])
 
    Inserts a user or an array of users into a channel record matching the network key
    network name and channel name, with the option to force an overwrite
 
    :param objectid key: A valid Mongo ObjectID for the networks collection
-   :param string network: The network name, such as 'freenode'
    :param string channel: The channel name '#ircanywhere'
-   :param array[object] users: An array of valid user objects usually from a who/join output
+   :param [object] users: An array of valid user objects usually from a who/join output
    :param boolean [force]: Optional boolean whether to overwrite the contents of the channelUsers
    :returns: A promise containing final array of the users inserted
 
-.. js:function:: ChannelManager.removeUsers(network[, channel, users])
+.. js:function:: ChannelManager.removeUsers(key[, channel, users])
 
    Removes a specific user from a channel, if users is omitted, channel should be equal to a nickname
    and that nickname will be removed from all channels records on that network.
 
-   :param string network: A valid network name
+   :param objectid key: A valid Mongo ObjectID for the networks collection
    :param string [channel]: A valid channel name
    :param array users: An array of users to remove from the network `or` channel
    :returns: void
 
-.. js:function:: ChannelManager.updateUsers(key, network, users, values)
+.. js:function:: ChannelManager.updateUsers(key, users, values)
 
    Updates a user or an array of users from the specific channel with the values passed in.
 
    :param objectid key: A valid Mongo ObjectID for the networks collection
-   :param string network: The name of the network
    :param array users: A valid users array
    :param object values: A hash of keys and values to be replaced in the users array
    :returns: void
 
-.. js:function:: ChannelManager.updateModes(key, capab, network, channel, mode)
+.. js:function:: ChannelManager.updateModes(key, capab, channel, mode)
 
    Takes a mode string, parses it and handles any updates to any records relating to
    the specific channel. This handles user updates and such, it shouldn't really be called
@@ -67,7 +74,6 @@ IRCAnywhere server/channels.js
 
    :param objectid key: A valid Mongo ObjectID for the networks collection
    :param object capab: A valid capabilities object from the 'registered' event
-   :param string network: Network name
    :param string channel: Channel name
    :param string mode: Mode string
    :returns: void
