@@ -20,6 +20,7 @@ Contents:
    pre_requirements
    installing_ircanywhere
    reverse_proxies
+   creating_modules
    server/index
 
 .. _IRCCloud: https://www.irccloud.com
