@@ -62,16 +62,12 @@ Client side modules are compiled into the final javascript build, and can modify
 In this example below you can see how a client side implementation of the ``/helloworld`` command can be created. ::
 
     App.InputController.reopen({
-        _commands: {
+        commands: {
             '/helloworld': function() {
                 console.log('hello world');
                 console.log(arguments);
             }
         },
-
-        bind: function() {
-            this.bindCommands();
-        }.on('init')
     });
 
 We can use Ember's ``reopen`` to reopen any class and override existing core functionality. The client side javascript is currently undocumented and the module system is still partially complete, this section will be updated in the future.
